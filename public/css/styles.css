@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -11,30 +13,54 @@ body {
   padding: 20px;
 }
 
+.main-header-top-bar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .hamburguer-button {
   background-color: #03264c;
   color: #ffffff;
   display: block;
   max-width: 50px;
-  padding: 15px 0;
+  padding: 10px 0;
   border-radius: 8px;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   margin: auto;
 }
 
 .logo {
-  width: 90px;
+  width: 140px;
+  margin-right: 20px;
 }
 
 .content-search {
-  width: 170px;
   background-color: #fff;
   padding: 10px;
+  border-radius: 5px;
+  color: #ebebeb;
+  font-size: 12px;
+  display: flex;
+  width: 160px;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-search input[type="search"] {
+  border: none;
+  width: 125px;
+}
+
+.content-search span {
+  border-left: solid 1px #ebebeb;
+  padding-left: 10px;
 }
 .copy-header {
   font-weight: 400;
   text-align: center;
+  font-size: 14px;
+  margin: 20px;
 }
 
 .main-navbar {
@@ -53,4 +79,70 @@ body {
   display: inline-block;
   padding: 5px 0;
   font-size: 17px;
+}
+
+@media (min-width: 768px) {
+  .main-header-top-bar {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .content-search {
+    padding: 5px;
+    border-radius: 5px;
+    color: #ebebeb;
+    font-size: 14px;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+  }
+
+  .content-search input[type="search"] {
+    width: 250px;
+  }
+
+  .hamburguer-button {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 35px;
+  }
+
+  .copy-header {
+    max-width: 350px;
+    text-align: right;
+  }
+
+  .main-navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-navbar ul {
+    display: flex;
+  }
+  .main-navbar li {
+    margin: 0 5px;
+  }
+
+  .main-navbar a {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-header-top-bar,
+  .main-navbar {
+    border: dotted 2px red;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .main-navbar li {
+    margin: 0 10px;
+  }
 }
