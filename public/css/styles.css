@@ -39,7 +39,7 @@ body {
   background-color: #fff;
   padding: 10px;
   border-radius: 5px;
-  color: #ebebeb;
+  color: #666666;
   font-size: 12px;
   display: flex;
   width: 160px;
@@ -54,7 +54,7 @@ body {
 
 .content-search span {
   border-left: solid 1px #ebebeb;
-  padding-left: 10px;
+  padding: 5px;
 }
 .copy-header {
   font-weight: 400;
@@ -91,7 +91,6 @@ body {
   .content-search {
     padding: 5px;
     border-radius: 5px;
-    color: #ebebeb;
     font-size: 14px;
     display: flex;
     width: 500px;
@@ -99,7 +98,6 @@ body {
     align-items: center;
     height: 32px;
   }
-
   .content-search input[type="search"] {
     width: 250px;
   }
@@ -136,13 +134,31 @@ body {
 }
 
 @media (min-width: 1200px) {
+
+  .logo{
+    width: 200px;
+  }
   .main-header-top-bar,
   .main-navbar {
-    border: dotted 2px red;
     max-width: 1200px;
     margin: auto;
   }
+
+  .main-header-top-bar{
+    margin-bottom: 20px;
+  }
   .main-navbar li {
     margin: 0 10px;
+  }
+
+  .main-navbar a {
+    font-size: 18px;
+  }
+
+  .copy-header {
+    margin:0;
+    max-width: none;
+    font-weight: 400;
+    font-size: 16px;
   }
 }
