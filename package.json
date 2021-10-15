@@ -1,0 +1,20 @@
+{
+  "name": "mercado-liebrev2",
+  "version": "1.0.0",
+  "description": "Estructuración de sitio web Mercado Liebre para afianzar conocimientos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "Css",
+    "Javascript",
+    "Node"
+  ],
+  "author": "Kate Castaño",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
