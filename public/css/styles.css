@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+img{
+  width: 100%;
 }
 
 .main-header {
@@ -61,6 +67,7 @@ body {
   text-align: center;
   font-size: 14px;
   margin: 20px;
+  color:black;
 }
 
 .main-navbar {
@@ -81,6 +88,43 @@ body {
   font-size: 17px;
 }
 
+.banners{
+  background-image: url("/images/img-home-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 360px;
+}
+
+footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 30px 15px 15px 15px;
+}
+
+footer i {
+  font-size: 2em;
+  margin: 50px 10px 5px 10px;
+  color: #1259c3;
+}
+
+footer p {
+  font-size: 12px;
+  width: 80%;
+  margin: auto;
+  color:#666666;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color:#666666;
+}
+h5{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+
 @media (min-width: 768px) {
   .main-header-top-bar {
     justify-content: space-between;
@@ -99,7 +143,11 @@ body {
     height: 32px;
   }
   .content-search input[type="search"] {
-    width: 250px;
+    width: 100%;
+  }
+
+  .content-search input[type="search"]:focus,  .content-search input[type="search"]:active {
+    outline: none;
   }
 
   .hamburguer-button {
@@ -131,6 +179,13 @@ body {
     font-size: 15px;
     font-weight: 400;
   }
+  footer p {
+    font-size: 14px;
+  }
+  .banners{
+    height: 200px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -160,5 +215,29 @@ body {
     max-width: none;
     font-weight: 400;
     font-size: 16px;
+  }
+  footer{
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+  }
+  footer i {
+    font-size: 4em;
+    margin: 50px 10px 5px 10px;
+  }
+
+  footer p {
+    font-size: 16px;
+
+  }
+  footer h3{
+    font-size: 22px;
+  }
+  h5{
+    font-size: 18px;
+  }
+  .banners{
+    height: 400px;
+    width: 100%;
   }
 }
