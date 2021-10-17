@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -22,6 +22,7 @@ img{
 .main-header-top-bar {
   display: flex;
   flex-wrap: wrap;
+  justify-content:space-between;
 }
 
 .hamburguer-button {
@@ -37,30 +38,29 @@ img{
 }
 
 .logo {
-  width: 140px;
-  margin-right: 20px;
+  width: 50%;
 }
 
 .content-search {
   background-color: #fff;
-  padding: 10px;
   border-radius: 5px;
+  padding: 5px;
   color: #666666;
-  font-size: 12px;
+  font-size: 10px;
   display: flex;
-  width: 160px;
   justify-content: center;
   align-items: center;
 }
 
 .content-search input[type="search"] {
   border: none;
-  width: 125px;
+  width: 105px;
 }
 
 .content-search span {
   border-left: solid 1px #ebebeb;
   padding: 5px;
+  cursor: pointer;
 }
 .copy-header {
   font-weight: 400;
@@ -124,35 +124,48 @@ h5{
   margin-top: 30px;
 }
 
-section{
+main{
   background-color: #ebebeb;
   padding: 10px;
 }
+main h2{
+  font-size: 20px;
+}
+section{
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .product_article{
+  width: 80%;
   background-color: #fff;
   margin-top: 15px;
   padding: 15px;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.border_gray{
-  border-bottom: solid 1px #ebebeb;
+hr{
   margin-bottom: 20px;
+  color: #ebebeb;
+  opacity: 0.1;
 }
 
-.content_info_produ i{
+
+main section article i{
+  display: block;
+  font-size: 16px;
+  padding: 5px;  
   width: 30px;
   height: 30px;
-  padding: 5px;
-  font-size: 16px;
-  border: solid 1px #39b54a;
+  border: 1px solid #39b54a;
+  background: #fff;
   border-radius: 50%;
   color: #39b54a;
-  position: absolute;
-  right: 31px;
-  display: block;
-  /* bottom: -98px; */
-  background: #fff;
+  /* position: absolute;
+  right: 20px;
+  top: -15px; */
 }
 
 .content_info_produ h4{
@@ -167,12 +180,14 @@ section{
   color: #666666;
   font-weight: bold;
   font-size: 18px;
-  margin-right: 8px;
+  width: 30%;
 }
 
 .price_paragraph{
   color:#39b54a;
-  font-size: 15px;  
+  font-size: 15px; 
+  width: 70%; 
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -205,6 +220,7 @@ section{
   }
 
   .logo {
+    width: 25%;
     margin-right: 35px;
   }
 
@@ -229,12 +245,30 @@ section{
     font-size: 15px;
     font-weight: 400;
   }
+  main h2{
+    font-size: 24px;
+    margin-left: 36px;
+    margin-top: 15px;
+  }
+
   footer p {
     font-size: 14px;
   }
   .banners{
     height: 200px;
   }
+  section{  
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product_article {
+    width: 40%;
+    margin: 37px;
+    padding: 18px;
+  }
+
+  
 }
 
 @media (min-width: 1200px) {
@@ -257,6 +291,11 @@ section{
 
   .main-navbar a {
     font-size: 18px;
+  }
+
+  main h2 {
+    font-size: 31px;
+    margin-left: 20px;
   }
 
   .copy-header {
@@ -287,5 +326,24 @@ section{
   }
   .banners{
     height: 400px;
+  }
+  section{  
+    flex-wrap: nowrap;
+  }
+  .product_article {
+    width: 25%;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .content_info_produ h4 {
+    font-size: 17px;
+  }
+
+  .mt_price {
+    font-size: 23px;
+  }
+  .price_paragraph {
+    font-size: 19px;
   }
 }
