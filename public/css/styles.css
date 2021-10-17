@@ -130,6 +130,7 @@ main{
 }
 main h2{
   font-size: 20px;
+  margin-top: 10px;
 }
 section{
   display: flex;  
@@ -188,6 +189,42 @@ main section article i{
   font-size: 15px; 
   width: 70%; 
   text-align: center;
+}
+
+.bg-login{
+  background-color:#ebebeb;
+  text-align: center;
+  padding: 10px;
+}
+
+.content-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content-login input{
+    padding: 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    margin: 10px 10px 25px 10px;
+}
+
+.content-login input:active, input:focus{
+  border: 2px solid #EAC926 !important;
+}
+
+.content-login button{
+    padding: 15px;
+    background-color: #1259c3;
+    color:#fff;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    margin: 10px 10px 25px 10px;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
