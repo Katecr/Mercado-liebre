@@ -12,10 +12,93 @@
 </head>
 
 <body>
-  <h1>Formulario de registro</h1>
-  <form action="/" method="post">
+  <header class="main-header">
+    <div class="main-header-top-bar">
+      <img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo_Mercado_Liebre" title="Logo_Mercado_Liebre">
 
-  </form>
+      <div class="content-search">
+        <input type="search" id="gsearch" name="gsearch" placeholder="Buscar productos, marcas y más">
+        <span><i class="fas fa-search"></i></span>
+      </div>
+
+      <h2 class="copy-header">
+        <i class="fas fa-hand-holding-usd"></i>
+        Comprá en cuotas y sin tarjeta de crédito
+      </h2>
+    </div>
+    <a href="#" class="hamburguer-button">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav class="main-navbar">
+      <ul class="left-navbar">
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Tiendas Oficiales</a></li>
+        <li><a href="#">Vender</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+      <ul class="right-navbar">
+        <li><a href="/registro">Creá tu cuenta </a> <i class="far fa-id-card"></i></li>
+        <li><a href="/ingreso">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
+        <li><a href="#">Mis compras </a><i class="fas fa-shopping-basket"></i></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="bg-login">
+    <h1>Formulario de registro</h1>
+    <form action="/">
+      <div class="content-login">
+        <label for="name">Nombre y apellido</label>
+        <input type="text" name="name" id="name" required minlength="3">
+        <label for="user">Nombre de usuario</label>
+        <input type="text" name="user" id="user" required minlength="4">
+        <label for="birth">Fecha de nacimiento</label>
+        <input type="date" name="birth" id="birth">
+        <label for="adress">Domicilio</label>
+        <input type="text" name="adress" id="adress">
+        <label for="profile">Perfil del usuario</label><br>
+        <div class="profile-user">
+          <label><input type="radio" name="profile" value="comprar">Comprar</label><br>
+          <label><input type="radio" name="profile" value="vender">Vender</label><br>
+        </div>
+        <label for="category">Categorías de interés</label><br>
+        <label><input type="checkbox" name="category" value="Electro">Electro</label>
+        <label><input type="checkbox" name="category" value="Moda">Moda</label>
+        <label><input type="checkbox" name="category" value="Hogar">Hogar</label>
+        <label><input type="checkbox" name="category" value="Juguetería">Juguetería</label>
+        <label><input type="checkbox" name="category" value="Vida sana">Vida sana</label>
+        <label for="photo">Foto de usuario</label>
+        <input type="file" name="photo" id="photo">
+        <label for="password" class="label-form">Contraseña</label>
+        <input type="password" name="password" id="password" required minlength="6">
+        <label for="confirm" class="label-form">Confirmación contraseña</label>
+        <input type="confirm" name="confirm" id="confirm" required minlength="6">
+        <button type="submit">Enviar</button>
+        <button type="reset">borrar</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <div class="content-footer">
+      <i class="fas fa-credit-card"></i>
+      <h3>Pagá con tarjeta o en efectivo</h3>
+      <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+        puntos de pago. ¡Y siempre es seguro!</p>
+    </div>
+    <div>
+      <i class="fas fa-gift"></i>
+      <h3>Envío gratis desde $ 2.500</h3>
+      <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+        productos. Es un beneficio de Mercado Puntos.</p>
+    </div>
+    <div>
+      <i class="fas fa-user-shield"></i>
+      <h3>Seguridad, de principio a fin</h3>
+      <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+        porque estás siempre protegid@.</p>
+    </div>
+
+  </footer>
+  <h5>Copyright © 1999-2020 MercadoLiebre S.R.L.</h5>
 </body>
 
 </html>
