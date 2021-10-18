@@ -37,8 +37,12 @@ img{
   margin: auto;
 }
 
-.logo {
+.content-link-logo{
   width: 50%;
+}
+
+.logo {
+  width: 100%;
 }
 
 .content-search {
@@ -314,11 +318,10 @@ input[type=radio]:checked, input[type=checkbox]:checked {
   .hamburguer-button {
     display: none;
   }
-
-  .logo {
+  .content-link-logo{
     width: 25%;
     margin-right: 35px;
-  }
+  }  
 
   .copy-header {
     max-width: 350px;
@@ -372,9 +375,11 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 
 @media (min-width: 1200px) {
 
-  .logo{
+  .content-link-logo{
     width: 200px;
+    margin-right: 0;
   }
+  
   .main-header-top-bar,
   .main-navbar {
     max-width: 1200px;
