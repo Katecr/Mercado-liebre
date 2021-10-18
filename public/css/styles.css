@@ -23,6 +23,7 @@ img{
   display: flex;
   flex-wrap: wrap;
   justify-content:space-between;
+  align-items: center;
 }
 
 .hamburguer-button {
@@ -46,6 +47,8 @@ img{
 }
 
 .content-search {
+  width: 50%;
+  height: 30px;
   background-color: #fff;
   border-radius: 5px;
   padding: 5px;
@@ -58,7 +61,7 @@ img{
 
 .content-search input[type="search"] {
   border: none;
-  width: 105px;
+  width: 163px;
 }
 
 .content-search span {
