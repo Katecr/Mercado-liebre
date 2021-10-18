@@ -14,8 +14,9 @@
 <body>
   <header class="main-header">
     <div class="main-header-top-bar">
-      <img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo_Mercado_Liebre" title="Logo_Mercado_Liebre">
-
+      <a href="/">
+        <img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo_Mercado_Liebre" title="Logo_Mercado_Liebre">
+      </a>
       <div class="content-search">
         <input type="search" id="gsearch" name="gsearch" placeholder="Buscar productos, marcas y más">
         <span><i class="fas fa-search"></i></span>
@@ -47,33 +48,37 @@
     <h1>Formulario de registro</h1>
     <form action="/">
       <div class="content-login">
-        <label for="name">Nombre y apellido</label>
+        <label for="name" class="label-form">Nombre y apellido</label>
         <input type="text" name="name" id="name" required minlength="3">
-        <label for="user">Nombre de usuario</label>
+        <label for="user" class="label-form">Nombre de usuario</label>
         <input type="text" name="user" id="user" required minlength="4">
-        <label for="birth">Fecha de nacimiento</label>
+        <label for="birth" class="label-form">Fecha de nacimiento</label>
         <input type="date" name="birth" id="birth">
-        <label for="adress">Domicilio</label>
+        <label for="adress" class="label-form">Domicilio</label>
         <input type="text" name="adress" id="adress">
-        <label for="profile">Perfil del usuario</label><br>
+        <label for="profile" class="label-form">Perfil del usuario</label><br>
         <div class="profile-user">
-          <label><input type="radio" name="profile" value="comprar">Comprar</label><br>
-          <label><input type="radio" name="profile" value="vender">Vender</label><br>
+          <label class="label-profile"><input type="radio" name="profile" value="comprar">Comprar</label><br>
+          <label class="label-profile"><input type="radio" name="profile" value="vender">Vender</label><br>
         </div>
-        <label for="category">Categorías de interés</label><br>
-        <label><input type="checkbox" name="category" value="Electro">Electro</label>
-        <label><input type="checkbox" name="category" value="Moda">Moda</label>
-        <label><input type="checkbox" name="category" value="Hogar">Hogar</label>
-        <label><input type="checkbox" name="category" value="Juguetería">Juguetería</label>
-        <label><input type="checkbox" name="category" value="Vida sana">Vida sana</label>
-        <label for="photo">Foto de usuario</label>
+        <br>
+        <label for="category" class="label-form">Categorías de interés</label>
+        <label class="label-category"><input type="checkbox" name="category" value="Electro">Electro</label>
+        <label class="label-category"><input type="checkbox" name="category" value="Moda">Moda</label>
+        <label class="label-category"><input type="checkbox" name="category" value="Hogar">Hogar</label>
+        <label class="label-category"><input type="checkbox" name="category" value="Juguetería">Juguetería</label>
+        <label class="label-category"><input type="checkbox" name="category" value="Vida sana">Vida sana</label>
+        <br>
+        <label for="photo" class="label-form">Foto de usuario</label>
         <input type="file" name="photo" id="photo">
         <label for="password" class="label-form">Contraseña</label>
         <input type="password" name="password" id="password" required minlength="6">
         <label for="confirm" class="label-form">Confirmación contraseña</label>
         <input type="confirm" name="confirm" id="confirm" required minlength="6">
-        <button type="submit">Enviar</button>
-        <button type="reset">borrar</button>
+        <div class="btn-form">
+          <button type="reset" class="btn-reset">Borrar</button>
+          <button type="submit">Enviar</button>
+        </div>
       </div>
     </form>
   </div>
