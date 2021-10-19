@@ -10,19 +10,23 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-img{
+img {
   width: 100%;
 }
 
 .main-header {
   background-color: #eac926;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .main-header-top-bar {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -38,7 +42,7 @@ img{
   margin: auto;
 }
 
-.content-link-logo{
+.content-link-logo {
   width: 50%;
 }
 
@@ -74,7 +78,7 @@ img{
   text-align: center;
   font-size: 14px;
   margin: 20px;
-  color:black;
+  color: black;
 }
 
 .main-navbar {
@@ -95,12 +99,13 @@ img{
   font-size: 17px;
 }
 
-.banners{
+.banners {
   background-image: url("/images/img-home-banner.jpg");
   background-size: cover;
   background-position: center;
   height: 100px;
   width: 100%;
+  margin-top: 184px;
 }
 
 footer {
@@ -115,52 +120,73 @@ footer i {
   color: #1259c3;
 }
 
+footer i:hover {
+  color: #ecb709;
+}
+
 footer p {
   font-size: 12px;
   width: 80%;
   margin: auto;
-  color:#666666;
+  color: #666666;
 }
 
-h1,h2,h3,h4,h5,h6{
-  color:#666666;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #666666;
 }
-h5{
+h5 {
   text-align: center;
   font-size: 14px;
   margin-top: 30px;
 }
 
-main{
+main {
   background-color: #ebebeb;
   padding: 10px;
 }
-main h2{
+main h2 {
   font-size: 20px;
   margin-top: 10px;
 }
-section{
-  display: flex;  
+section {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.product_article{
+.product_article {
   width: 80%;
   background-color: #fff;
   margin-top: 10px;
   padding: 15px;
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition: all 400ms ease-out;
+  cursor: pointer;
 }
-.content-icon{
+
+.product_article:hover {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition: all 400ms ease-out;
+}
+
+.product_article:hover .product_description {
+  transform: scale(1);
+  transition: all 400ms ease-out;
+}
+
+.content-icon {
   position: relative;
 }
 
-main section article i{
+main section article i {
   display: block;
   font-size: 16px;
-  padding: 5px;  
+  padding: 5px;
   width: 30px;
   height: 30px;
   border: 1px solid #39b54a;
@@ -171,47 +197,51 @@ main section article i{
   right: 0;
   top: -30px;
 }
-.content_info_produ{
+.content_info_produ {
   border-top: solid 1px #ebebeb;
   padding: 15px;
 }
-.content_info_produ h4{
+.content_info_produ h4 {
   font-size: 14px;
   margin-top: 15px;
+  display: inline-block;
 }
-.product{
+.product {
   display: flex;
   align-items: baseline;
 }
-.mt_price{
+.mt_price {
   color: #666666;
   font-weight: bold;
   font-size: 18px;
   width: 30%;
 }
-.product_description{
-  display: none;
+.product_description {
+  transform: scale(0);
+  transition: all 300ms ease-out;
 }
-.price_paragraph{
-  color:#39b54a;
-  font-size: 15px; 
-  width: 70%; 
+
+.price_paragraph {
+  color: #39b54a;
+  font-size: 15px;
+  width: 70%;
   text-align: center;
 }
 
-.bg-login{
-  background-color:#ebebeb;
+.bg-login {
+  background-color: #ebebeb;
   padding: 20px 32px 20px;
 }
-.bg-login h1{
-  color:#000;
+.bg-login h1 {
+  color: #000;
   text-align: center;
   font-weight: 400;
   font-size: 24px;
   margin-bottom: 40px;
+  margin-top: 260px;
 }
 
-.content-login{
+.content-login {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -220,74 +250,83 @@ main section article i{
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-.label-form{
+.label-form {
   text-align: left !important;
   color: rgba(0, 0, 0, 0.7);
   font-size: 14px;
   font-weight: bold;
 }
-.content-login input{
-    background: transparent;
-    border: 0;
-    padding: 5px;
-    border-bottom: solid 1px #c2c2c2;
-    margin-bottom: 30px;
+.content-login input {
+  background: transparent;
+  border: 0;
+  padding: 5px;
+  border-bottom: solid 1px #c2c2c2;
+  margin-bottom: 30px;
 }
 
-input:active, input:focus{
+input:active,
+input:focus {
   outline: none;
-  border-bottom: solid 1px #EAC926;
+  border-bottom: solid 1px #eac926;
 }
 
-.content-login button{
-    padding: 15px;
-    background-color: #1259c3;
-    color:#fff;
-    border: none;
-    border-radius: 5px;
-    display: block;
-    max-width: 100px;
-    margin: auto;
-    cursor: pointer;
+.content-login button {
+  padding: 15px;
+  background-color: #1259c3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  max-width: 100px;
+  margin: auto;
+}
+
+.content-login button:hover {
+  background: #0022aa;
+  cursor: pointer;
 }
 
 input[type="date"] {
   width: 100%;
 }
 
-input[type="date"], input[type="file"] {
+input[type="date"],
+input[type="file"] {
   font-size: 12px;
 }
 
-input[type="radio"], input[type="checkbox"]  {
-  margin-right:5px;
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
   margin-bottom: 0;
 }
 
-input[type=radio]:checked, input[type=checkbox]:checked {
-  background-color: #EAC926;
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+  background-color: #eac926;
 }
 
-.profile-user{
+.profile-user {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.label-category{
+.label-category {
   margin: 5px 0 5px 0;
 }
-.label-category, .label-profile{
+.label-category,
+.label-profile {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.7);
 }
-.btn-form{
+.btn-form {
   display: flex;
 }
-.btn-reset{
-  background-color:#ebebeb !important;
-  color:#666666 !important;
+.btn-reset {
+  background-color: #ebebeb !important;
+  color: #666666 !important;
 }
 @media (min-width: 768px) {
   .main-header-top-bar {
@@ -310,21 +349,18 @@ input[type=radio]:checked, input[type=checkbox]:checked {
     width: 100%;
   }
 
-  .content-search input[type="search"]:focus,  .content-search input[type="search"]:active {
+  .content-search input[type="search"]:focus,
+  .content-search input[type="search"]:active {
     outline: none;
-  }
-
-  .product_description{
-    display: block;
   }
 
   .hamburguer-button {
     display: none;
   }
-  .content-link-logo{
+  .content-link-logo {
     width: 25%;
     margin-right: 35px;
-  }  
+  }
 
   .copy-header {
     max-width: 350px;
@@ -347,7 +383,7 @@ input[type=radio]:checked, input[type=checkbox]:checked {
     font-size: 15px;
     font-weight: 400;
   }
-  main h2{
+  main h2 {
     font-size: 24px;
     margin-left: 36px;
     margin-top: 15px;
@@ -356,10 +392,11 @@ input[type=radio]:checked, input[type=checkbox]:checked {
   footer p {
     font-size: 14px;
   }
-  .banners{
+  .banners {
     height: 200px;
+    margin-top: 137px;
   }
-  section{  
+  section {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -373,23 +410,25 @@ input[type=radio]:checked, input[type=checkbox]:checked {
   .profile-user {
     justify-content: space-evenly;
   }
-  
+
+  .bg-login h1 {
+    margin-top: 156px;
+  }
 }
 
 @media (min-width: 1200px) {
-
-  .content-link-logo{
+  .content-link-logo {
     width: 200px;
     margin-right: 0;
   }
-  
+
   .main-header-top-bar,
   .main-navbar {
     max-width: 1200px;
     margin: auto;
   }
 
-  .main-header-top-bar{
+  .main-header-top-bar {
     margin-bottom: 20px;
   }
   .main-navbar li {
@@ -406,35 +445,34 @@ input[type=radio]:checked, input[type=checkbox]:checked {
   }
 
   .copy-header {
-    margin:0;
+    margin: 0;
     max-width: none;
     font-weight: 400;
     font-size: 16px;
   }
-  footer{
+  footer {
     display: flex;
     max-width: 100%;
     justify-content: space-between;
   }
   footer i {
-    font-size: 4em;
-    margin: 50px 10px 5px 10px;
+    font-size: 38px;
   }
 
   footer p {
-    font-size: 16px;
-
+    font-size: 14px;
   }
-  footer h3{
-    font-size: 22px;
-  }
-  h5{
+  footer h3 {
     font-size: 18px;
   }
-  .banners{
-    height: 400px;
+  h5 {
+    font-size: 18px;
   }
-  section{  
+  .banners {
+    height: 400px;
+    margin-top: 146px;
+  }
+  section {
     flex-wrap: nowrap;
   }
   .product_article {
@@ -459,8 +497,9 @@ input[type=radio]:checked, input[type=checkbox]:checked {
     padding: 30px 100px 30px;
   }
 
-  .bg-login h1{
+  .bg-login h1 {
     font-size: 30px;
+    margin-top: 176px;
   }
   .label-form {
     font-size: 18px;
@@ -475,17 +514,20 @@ input[type=radio]:checked, input[type=checkbox]:checked {
   .profile-user {
     justify-content: flex-start;
   }
-  .profile-user label{
+  .profile-user label {
     margin-right: 15px;
   }
 
-  input[type="date"], input[type="file"] {
+  input[type="date"],
+  input[type="file"] {
     font-size: 16px;
   }
-  .label-category, .label-profile {
+  .label-category,
+  .label-profile {
     font-size: 16px;
   }
-  .label-category input, .label-profile input{
+  .label-category input,
+  .label-profile input {
     margin-bottom: inherit;
   }
   .btn-form {
