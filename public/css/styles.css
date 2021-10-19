@@ -179,8 +179,8 @@ section {
   transition: all 400ms ease-out;
 }
 
-.content-icon {
-  position: relative;
+.product_article:hover i {
+  transition: all 400ms ease-out;
 }
 
 main section article i {
@@ -194,12 +194,13 @@ main section article i {
   border-radius: 50%;
   color: #39b54a;
   position: absolute;
-  right: 0;
-  top: -30px;
+  right: 10px;
+  top: -16px;
 }
 .content_info_produ {
   border-top: solid 1px #ebebeb;
   padding: 15px;
+  position: relative;
 }
 .content_info_produ h4 {
   font-size: 14px;
