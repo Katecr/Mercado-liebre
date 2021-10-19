@@ -179,7 +179,8 @@ section {
   transition: all 400ms ease-out;
 }
 
-.product_article:hover i {
+.product_article:hover .content_info_produ i {
+  transform: rotate(-90deg);
   transition: all 400ms ease-out;
 }
 
@@ -196,6 +197,7 @@ main section article i {
   position: absolute;
   right: 10px;
   top: -16px;
+  transition: all 400ms ease-out;
 }
 .content_info_produ {
   border-top: solid 1px #ebebeb;
@@ -329,6 +331,11 @@ input[type="checkbox"]:checked {
   background-color: #ebebeb !important;
   color: #666666 !important;
 }
+.btn-reset:hover {
+  background-color: #aca9a9 !important;
+  color: #414141 !important;
+}
+
 @media (min-width: 768px) {
   .main-header-top-bar {
     justify-content: space-between;
