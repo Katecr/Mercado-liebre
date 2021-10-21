@@ -208,6 +208,7 @@ main section article i {
   font-size: 14px;
   margin-top: 15px;
   display: inline-block;
+  font-weight: 400;
 }
 .product {
   display: flex;
@@ -494,7 +495,7 @@ input[type="checkbox"]:checked {
   }
 
   .mt_price {
-    font-size: 23px;
+    font-size: 20px;
   }
   .price_paragraph {
     font-size: 19px;
