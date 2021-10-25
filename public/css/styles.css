@@ -466,10 +466,6 @@ input[type="checkbox"]:checked {
     max-width: 100%;
     justify-content: space-between;
   }
-  footer i {
-    font-size: 38px;
-  }
-
   footer p {
     font-size: 14px;
   }
